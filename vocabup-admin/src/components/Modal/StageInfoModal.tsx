@@ -4,6 +4,7 @@ import { Stage } from "../../types/stage";
 import { useForm } from "antd/es/form/Form";
 import TextArea from "antd/es/input/TextArea";
 import dayjs from "dayjs";
+import { FormattedMessage } from "react-intl";
 
 type StageInfoModalProps = {
   modalStatus: boolean;
@@ -48,13 +49,23 @@ const StageInfoModal: React.FC<StageInfoModalProps> = ({
       open={modalStatus}
       maskClosable={false}
       centered
-      title={<span className="txt---600-16-20-bold">Stage</span>}
-      okText={
-        <span className="txt---400-14-18-regular">
-          {stage._id?.includes("new") ? "Add" : "Update"}
+      title={
+        <span className="txt---600-16-20-bold">
+          <FormattedMessage id="common.stage" />
         </span>
       }
-      cancelText={<span className="txt---400-14-18-regular">Cancel</span>}
+      okText={
+        <span className="txt---400-14-18-regular">
+          <FormattedMessage
+            id={`common.${stage._id?.includes("new") ? "add" : "update"}`}
+          />
+        </span>
+      }
+      cancelText={
+        <span className="txt---400-14-18-regular">
+          <FormattedMessage id="common.cancel" />
+        </span>
+      }
       onCancel={onCancel}
       onOk={() => {
         stageFrm.validateFields().then(() => {
@@ -81,7 +92,11 @@ const StageInfoModal: React.FC<StageInfoModalProps> = ({
         <Row gutter={[12, 0]}>
           <Col span={24}>
             <Form.Item
-              label={<span className="txt---600-14-18-bold">Topic</span>}
+              label={
+                <span className="txt---600-14-18-bold">
+                  <FormattedMessage id="common.topic" />
+                </span>
+              }
               name="topic"
               required
               rules={[{ required: true, message: "Please enter stage topic!" }]}
@@ -95,7 +110,11 @@ const StageInfoModal: React.FC<StageInfoModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={<span className="txt---600-14-18-bold">Part</span>}
+              label={
+                <span className="txt---600-14-18-bold">
+                  <FormattedMessage id="common.part" />
+                </span>
+              }
               name="part"
               required
               rules={[{ required: true, message: "Please enter stage topic!" }]}
@@ -112,7 +131,11 @@ const StageInfoModal: React.FC<StageInfoModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={<span className="txt---600-14-18-bold">Lessons</span>}
+              label={
+                <span className="txt---600-14-18-bold">
+                  <FormattedMessage id="common.lessons" />
+                </span>
+              }
               name="lessons"
               tooltip="This is a optional field"
             >

@@ -13,6 +13,7 @@ import { logout, selectMenuSidebar } from "../../../redux/slice";
 import { Path } from "../../../constants";
 import clsx from "clsx";
 import { RiErrorWarningFill } from "react-icons/ri";
+import { FormattedMessage } from "react-intl";
 
 interface AdminSiderProps {
   items: ItemType<MenuItemType>[];
@@ -158,17 +159,25 @@ const AdminSider: React.FC<AdminSiderProps> = ({
               <span className={styles.iconWarn}>
                 <RiErrorWarningFill />
               </span>
-              Confirm logout
+              <FormattedMessage id="logout.confirm" />
             </Space>
           </div>
         }
         onOk={handleConfirmLogout}
         onCancel={handleCancelModalConfirmLogout}
-        okText={<span className="txt---400-14-22-regular">Log out</span>}
-        cancelText={<span className="txt---400-14-22-regular">Cancel</span>}
+        okText={
+          <span className="txt---400-14-22-regular">
+            <FormattedMessage id="menu.log-out" />
+          </span>
+        }
+        cancelText={
+          <span className="txt---400-14-22-regular">
+            <FormattedMessage id="common.cancel" />
+          </span>
+        }
       >
         <span className="txt---400-14-22-regular">
-          Are you sure you want to log out of this account?
+          <FormattedMessage id="logout.desc" />
         </span>
       </Modal>
     </div>

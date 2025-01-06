@@ -13,6 +13,7 @@ import { EventEmit, MessageType } from "../../constants";
 import { UploadRequestOption } from "rc-upload/lib/interface";
 import { NotificationService } from "../../service";
 import emitter from "../../utils/EventEmitter";
+import { FormattedMessage } from "react-intl";
 
 type NotificationPayload = {
   title: string;
@@ -158,7 +159,7 @@ const PushNotification: React.FC = () => {
             "txt---600-16-20-bold text-center",
           ])}
         >
-          New push notification
+          <FormattedMessage id="notification-management.new-noty" />
         </h3>
       </div>
 
@@ -171,7 +172,7 @@ const PushNotification: React.FC = () => {
                 "txt---600-14-18-bold text-right",
               ])}
             >
-              Title
+              <FormattedMessage id="common.title" />
             </div>
             <div className={styles.content}>
               <Input
@@ -212,7 +213,7 @@ const PushNotification: React.FC = () => {
                 "txt---600-14-18-bold text-right",
               ])}
             >
-              Message
+              <FormattedMessage id="notification-management.message" />
             </div>
             <div className={styles.content}>
               <TextArea
@@ -253,7 +254,7 @@ const PushNotification: React.FC = () => {
                 "txt---600-14-18-bold text-right",
               ])}
             >
-              Send to
+              <FormattedMessage id="notification-management.send-to" />
             </div>
             <div
               className={clsx([
@@ -261,7 +262,7 @@ const PushNotification: React.FC = () => {
                 "txt---600-14-18-bold text-left",
               ])}
             >
-              Push notification will be sent to all users with an image
+              <FormattedMessage id="notification-management.send-to-desc" />
             </div>
           </div>
 
@@ -274,7 +275,7 @@ const PushNotification: React.FC = () => {
                 onClick={handlePushNotification}
                 disabled={!notification.title || !notification.message}
               >
-                Send notification
+                <FormattedMessage id="notification-management.send-noty" />
               </Button>
             </div>
           </div>
@@ -315,7 +316,9 @@ const PushNotification: React.FC = () => {
               }}
             >
               <Button size="middle" icon={<UploadOutlined />}>
-                <span className="txt---600-14-18-bold">Image</span>
+                <span className="txt---600-14-18-bold">
+                  <FormattedMessage id="common.image" />
+                </span>
               </Button>
             </Upload>
           </div>

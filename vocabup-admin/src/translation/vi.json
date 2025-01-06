@@ -70,7 +70,15 @@
     "title": "Tiêu đề",
     "updated-date": "Ngày cập nhật",
     "view": "Xem",
-    "upload": "Tải lên"
+    "upload": "Tải lên",
+    "admin": "Quản trị viên",
+    "save": "Lưu",
+    "search": "Tìm kiếm",
+    "date-picker": "Chọn ngày",
+    "stage": "Chặng học",
+    "part": "Phần",
+    "lessons": "Các bài học",
+    "created-date": "Ngày tạo"
   },
   "menu": {
     "features": "CÁC TÍNH NĂNG",
@@ -163,5 +171,21 @@
     "post-content": "Nội dung bài đăng",
     "post": "Đăng",
     "enter-post-content": "Nhập nội dung bài đăng"
+  },
+  "personal-info": {
+    "first-name": "Họ",
+    "last-name": "Tên",
+    "edit-personal-info": "Chỉnh sửa thông tin cá nhân"
+  },
+  "notification-management": {
+    "new-noty": "Thông báo đẩy mới",
+    "message": "Lời nhắn",
+    "send-to": "Gửi đến",
+    "send-to-desc": "Thông báo đẩy sẽ được gửi đến tất cả người dùng cùng với hình ảnh tải lên",
+    "send-noty": "Gửi thông báo"
+  },
+  "logout": {
+    "confirm": "Xác nhận đăng xuất",
+    "desc": "Bạn có chắc muốn đăng xuất khỏi tài khoản này?"
   }
 }

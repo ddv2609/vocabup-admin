@@ -60,7 +60,9 @@ const AdminHeader: React.FC = () => {
           <span className={styles.actionIcon}>
             <FaInfoCircle />
           </span>
-          <span className="txt---600-12-16-bold">Account Infomation</span>
+          <span className="txt---600-12-16-bold">
+            <FormattedMessage id="menu.personal-info" />
+          </span>
         </Space>
       ),
     },
@@ -79,7 +81,9 @@ const AdminHeader: React.FC = () => {
           <span className={styles.actionIcon}>
             <IoNotificationsSharp />
           </span>
-          <span className="txt---600-12-16-bold">Notification</span>
+          <span className="txt---600-12-16-bold">
+            <FormattedMessage id="menu.notification" />
+          </span>
         </Space>
       ),
     },
@@ -90,7 +94,9 @@ const AdminHeader: React.FC = () => {
           <span className={styles.actionIcon}>
             <AiOutlineSetting />
           </span>
-          <span className="txt---600-12-16-bold">Setting</span>
+          <span className="txt---600-12-16-bold">
+            <FormattedMessage id="menu.setting" />
+          </span>
         </Space>
       ),
     },
@@ -106,7 +112,9 @@ const AdminHeader: React.FC = () => {
           <span className={styles.actionIcon}>
             <AiOutlineLogout />
           </span>
-          <span className="txt---600-12-16-bold">Log out</span>
+          <span className="txt---600-12-16-bold">
+            <FormattedMessage id="menu.log-out" />
+          </span>
         </Space>
       ),
     },

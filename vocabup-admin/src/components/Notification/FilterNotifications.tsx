@@ -19,6 +19,7 @@ import { HiOutlineFilter } from "react-icons/hi";
 import { BsCalendar2Date } from "react-icons/bs";
 import { Admin } from "../../types/members";
 import { callMessage } from "../../redux/slice";
+import { FormattedMessage } from "react-intl";
 
 const { RangePicker } = DatePicker;
 
@@ -205,7 +206,9 @@ const FilterNotifications: React.FC = () => {
               title={
                 <Space>
                   <IoIosSearch size={14} />
-                  <span className="txt---600-14-22-bold">Search</span>
+                  <span className="txt---600-14-22-bold">
+                    <FormattedMessage id="common.search" />
+                  </span>
                 </Space>
               }
               placement="bottomLeft"
@@ -217,9 +220,15 @@ const FilterNotifications: React.FC = () => {
                   onChange={handleChangeQueryString}
                 />
               }
-              okText={<span className="txt---600-14-22-regular">Search</span>}
+              okText={
+                <span className="txt---600-14-22-regular">
+                  <FormattedMessage id="common.search" />
+                </span>
+              }
               cancelText={
-                <span className="txt---600-14-22-regular">Reset</span>
+                <span className="txt---600-14-22-regular">
+                  <FormattedMessage id="common.reset" />
+                </span>
               }
               onConfirm={handleFilterNotifications}
               onCancel={() => setFilterInfo((prev) => ({ ...prev, q: "" }))}
@@ -236,7 +245,9 @@ const FilterNotifications: React.FC = () => {
             title={
               <Space>
                 <BsCalendar2Date size={14} />
-                <span className="txt---600-14-22-bold">Date Picker</span>
+                <span className="txt---600-14-22-bold">
+                  <FormattedMessage id="common.date-picker" />
+                </span>
               </Space>
             }
             placement="bottomLeft"
@@ -254,8 +265,16 @@ const FilterNotifications: React.FC = () => {
                 onCalendarChange={handleChangeDateFilter}
               />
             }
-            okText={<span className="txt---600-14-22-regular">Pick</span>}
-            cancelText={<span className="txt---600-14-22-regular">Reset</span>}
+            okText={
+              <span className="txt---600-14-22-regular">
+                <FormattedMessage id="common.pick" />
+              </span>
+            }
+            cancelText={
+              <span className="txt---600-14-22-regular">
+                <FormattedMessage id="common.reset" />
+              </span>
+            }
             onConfirm={handleFilterNotifications}
             onCancel={() =>
               setFilterInfo((prev) => ({ ...prev, start: null, end: null }))

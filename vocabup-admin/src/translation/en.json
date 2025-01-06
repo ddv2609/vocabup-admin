@@ -70,7 +70,15 @@
     "title": "Title",
     "updated-date": "Updated Date",
     "view": "View",
-    "upload": "Upload"
+    "upload": "Upload",
+    "admin": "Admin",
+    "save": "Save",
+    "search": "Search",
+    "date-picker": "Date Picker",
+    "stage": "Stage",
+    "part": "Part",
+    "lessons": "Lessons",
+    "created-date": "Created At"
   },
   "menu": {
     "features": "FEATURES",
@@ -162,5 +170,21 @@
     "post-content": "Post content",
     "post": "Post",
     "enter-post-content": "Enter post content"
+  },
+  "personal-info": {
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "edit-personal-info": "Edit personal information"
+  },
+  "notification-management": {
+    "new-noty": "New push notification",
+    "message": "Message",
+    "send-to": "Send to",
+    "send-to-desc": "Push notification will be sent to all users with an image",
+    "send-noty": "Send notification"
+  },
+  "logout": {
+    "confirm": "Confirm logout",
+    "desc": "Are you sure you want to log out of this account?"
   }
 }

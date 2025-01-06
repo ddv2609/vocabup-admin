@@ -25,6 +25,7 @@ import {
 import { MessageType } from "../../constants";
 import { MemberService } from "../../service";
 import { omit } from "lodash";
+import { FormattedMessage } from "react-intl";
 
 const PersonalInfomation: React.FC = () => {
   const admin = useReduxSelector((state) => state.app.admin) as Admin;
@@ -151,7 +152,7 @@ const PersonalInfomation: React.FC = () => {
           admin!.fullName.firstName
         } ${admin!.fullName.lastName}`}</h3>
         <p className={clsx([styles.role, "txt---600-12-16-bold"])}>
-          {admin.role}
+          <FormattedMessage id={`common.${admin.role}`} />
         </p>
       </div>
       <div className={styles.adminAvatar}>
@@ -209,7 +210,9 @@ const PersonalInfomation: React.FC = () => {
                 <Col span={6}>
                   <Form.Item
                     label={
-                      <span className="txt---600-14-18-bold">First Name</span>
+                      <span className="txt---600-14-18-bold">
+                        <FormattedMessage id="personal-info.first-name" />
+                      </span>
                     }
                     name="firstName"
                     required
@@ -228,7 +231,9 @@ const PersonalInfomation: React.FC = () => {
                 <Col span={6}>
                   <Form.Item
                     label={
-                      <span className="txt---600-14-18-bold">Last Name</span>
+                      <span className="txt---600-14-18-bold">
+                        <FormattedMessage id="personal-info.last-name" />
+                      </span>
                     }
                     name="lastName"
                     required
@@ -263,7 +268,9 @@ const PersonalInfomation: React.FC = () => {
                 <Col span={6}>
                   <Form.Item
                     label={
-                      <span className="txt---600-14-18-bold">Telephone</span>
+                      <span className="txt---600-14-18-bold">
+                        <FormattedMessage id="common.telephone" />
+                      </span>
                     }
                     name="tel"
                     tooltip="This is a optional field"
@@ -279,7 +286,11 @@ const PersonalInfomation: React.FC = () => {
                 </Col>
                 <Col span={6}>
                   <Form.Item
-                    label={<span className="txt---600-14-18-bold">Gender</span>}
+                    label={
+                      <span className="txt---600-14-18-bold">
+                        <FormattedMessage id="common.gender" />
+                      </span>
+                    }
                     name="gender"
                     tooltip="This is a optional field"
                   >
@@ -308,7 +319,7 @@ const PersonalInfomation: React.FC = () => {
                   <Form.Item
                     label={
                       <span className="txt---600-14-18-bold">
-                        Date Of Birth
+                        <FormattedMessage id="common.dob" />
                       </span>
                     }
                     name="dob"
@@ -324,7 +335,9 @@ const PersonalInfomation: React.FC = () => {
                 <Col span={8}>
                   <Form.Item
                     label={
-                      <span className="txt---600-14-18-bold">Country</span>
+                      <span className="txt---600-14-18-bold">
+                        <FormattedMessage id="common.country" />
+                      </span>
                     }
                     name="country"
                     tooltip="This is a optional field"
@@ -339,7 +352,9 @@ const PersonalInfomation: React.FC = () => {
                 <Col span={8}>
                   <Form.Item
                     label={
-                      <span className="txt---600-14-18-bold">Province</span>
+                      <span className="txt---600-14-18-bold">
+                        <FormattedMessage id="common.province" />
+                      </span>
                     }
                     name="province"
                     tooltip="This is a optional field"
@@ -354,7 +369,9 @@ const PersonalInfomation: React.FC = () => {
                 <Col span={8}>
                   <Form.Item
                     label={
-                      <span className="txt---600-14-18-bold">District</span>
+                      <span className="txt---600-14-18-bold">
+                        <FormattedMessage id="common.district" />
+                      </span>
                     }
                     name="district"
                     tooltip="This is a optional field"
@@ -368,7 +385,11 @@ const PersonalInfomation: React.FC = () => {
                 </Col>
                 <Col span={8}>
                   <Form.Item
-                    label={<span className="txt---600-14-18-bold">Ward</span>}
+                    label={
+                      <span className="txt---600-14-18-bold">
+                        <FormattedMessage id="common.ward" />
+                      </span>
+                    }
                     name="ward"
                     tooltip="This is a optional field"
                   >
@@ -383,7 +404,7 @@ const PersonalInfomation: React.FC = () => {
                   <Form.Item
                     label={
                       <span className="txt---600-14-18-bold">
-                        Detail Address
+                        <FormattedMessage id="common.detail-address" />
                       </span>
                     }
                     name="detail"
@@ -408,7 +429,7 @@ const PersonalInfomation: React.FC = () => {
                   setEditable((prev) => !prev);
                 }}
               >
-                Cancel
+                <FormattedMessage id="common.cancel" />
               </Button>
             )}
             <Button
@@ -421,7 +442,11 @@ const PersonalInfomation: React.FC = () => {
                 }
               }}
             >
-              {editable ? "Save" : "Edit personal information"}
+              {editable ? (
+                <FormattedMessage id="common.save" />
+              ) : (
+                <FormattedMessage id="personal-info.edit-personal-info" />
+              )}
             </Button>
           </div>
         </div>

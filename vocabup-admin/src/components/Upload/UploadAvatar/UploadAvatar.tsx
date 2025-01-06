@@ -8,6 +8,7 @@ import { MessageType } from "../../../constants";
 import { UploadRequestOption } from "rc-upload/lib/interface";
 import { Admin, User } from "../../../types";
 import { FaUser, FaUserShield } from "react-icons/fa6";
+import { FormattedMessage, useIntl } from "react-intl";
 
 type UploadImageProps = {
   src: string | null | undefined;
@@ -33,6 +34,7 @@ const UploadAvatar: React.FC<UploadImageProps> = ({
   const [previewOpen, setPreviewOpen] = useState<boolean>(false);
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
   const handleOpenPreview = () => setPreviewOpen(true);
+  const intl = useIntl();
 
   const editOptions = [
     {
@@ -42,7 +44,7 @@ const UploadAvatar: React.FC<UploadImageProps> = ({
           onClick={() => setOpenDropdown(false)}
           className="txt---400-14-18-regular"
         >
-          Update
+          <FormattedMessage id="common.update" />
         </div>
       ),
     },
@@ -57,7 +59,7 @@ const UploadAvatar: React.FC<UploadImageProps> = ({
             await handleDeleteImage(() => setUpLoad(false));
           }}
         >
-          Delete
+          <FormattedMessage id="common.delete" />
         </div>
       ),
     },
@@ -68,7 +70,7 @@ const UploadAvatar: React.FC<UploadImageProps> = ({
       dispatch(
         callMessage({
           type: MessageType.ERROR,
-          content: "Bạn chỉ có thể tải file ảnh lên!",
+          content: intl.formatMessage({ id: "common.image-type-error" }),
         })
       );
       return Upload.LIST_IGNORE;
@@ -135,7 +137,7 @@ const UploadAvatar: React.FC<UploadImageProps> = ({
               >
                 <Space>
                   <EditOutlined className={styles.editIcon} />
-                  Edit
+                  <FormattedMessage id="common.edit" />
                 </Space>
               </Button>
             </Dropdown>
