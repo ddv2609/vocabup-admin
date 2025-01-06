@@ -1,0 +1,47 @@
+.adminHeaderContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+
+  .adminGeneralInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 24px;
+    cursor: pointer;
+    outline: 1px solid var(--action-hover-color-bg);
+
+    &:hover {
+      outline: 1px solid var(--primary-color);
+      background-color: var(--bg-active-primary-color);
+    }
+  }
+
+  .selectLangContainer {
+    min-width: 124px;
+
+    .language {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+}
+.language {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionItem {
+  // display: fl;
+  .actionIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

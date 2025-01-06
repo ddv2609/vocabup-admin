@@ -1,0 +1,16 @@
+.notificationsManagementContainer {
+  height: 100%;
+
+  .notificationsManagementWrapper {
+    height: 100%;
+
+    .pushNotificationsWrapper {
+      height: 100%;
+    }
+
+    .viewNotificationsWrapper {
+      height: 100%;
+      border-left: 2px solid var(--border-color);
+    }
+  }
+}

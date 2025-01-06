@@ -1,0 +1,63 @@
+.stageCardContainer {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--admin-box-shadow);
+
+  .stageCardImg {
+    min-width: 224px;
+    min-height: 126px;
+
+    img {
+      max-width: 224px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .stagePart {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: var(--text-light);
+  }
+
+  .stageInfoWrapper {
+    padding: 8px;
+
+    h4 {
+      margin: 0;
+      max-width: 208px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-bottom: 6px;
+    }
+
+    .stageDesc {
+      max-width: 208px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 6px;
+      min-height: 48px;
+      color: var(--text-secondary-color);
+    }
+
+    button {
+      width: 100%;
+      color: var(--text-secondary-color);
+    }
+  }
+
+  .stageActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+}

@@ -4,9 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>VocabUp Admin</title>
+    <style>
+      #small-screen-message {
+        display: none;
+      }
+
+      @media (max-width: 852px) {
+        #root {
+          display: none;
+        }
+
+        #small-screen-message {
+          font-weight: 600 !important;
+          font-family: "Helvetica", sans-serif !important;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+          color: #000;
+          text-align: center;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="small-screen-message">
+      Trang web không hỗ trợ kích thước màn này
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

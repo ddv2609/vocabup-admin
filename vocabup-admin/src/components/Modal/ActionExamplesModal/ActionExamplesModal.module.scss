@@ -1,0 +1,39 @@
+.examplesContainer {
+  .iconAddWrapper {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .actionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4px;
+    .btnAction {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px;
+      font-size: 16px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #ccc;
+      }
+
+      &.update {
+        color: rgb(1, 193, 1);
+      }
+
+      &.delete {
+        color: rgb(243, 118, 128);
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.stagesManagementContainer {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .stageActions {
+    width: 100%;
+    text-align: center;
+  }
+}

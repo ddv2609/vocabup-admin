@@ -1,0 +1,28 @@
+.filterNotificationsContainer {
+  position: relative;
+  height: 90%;
+  .filterNotificationsWrapper {
+    padding: 10px 0;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 8px;
+
+    .reload {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}
+
+:global {
+  .ant-space-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-space {
+    column-gap: 4px;
+  }
+}

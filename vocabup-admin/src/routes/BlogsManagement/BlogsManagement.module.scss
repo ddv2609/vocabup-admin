@@ -1,0 +1,41 @@
+.blogsManagementContainer {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+
+  .postedListContainer {
+    width: 55%;
+  }
+
+  .verticalLine {
+    border: 0.5px solid var(--border-color);
+  }
+
+  .postContainer {
+    // width: 50%;
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    position: relative;
+
+    .contentPost {
+      .subjectWrapper,
+      .mainContentWrapper {
+        .title {
+          margin-bottom: 6px;
+        }
+        margin-bottom: 16px;
+      }
+    }
+
+    .postUploadWrapper {
+      position: relative;
+      .postBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}

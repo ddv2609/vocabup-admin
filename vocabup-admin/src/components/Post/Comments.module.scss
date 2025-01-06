@@ -1,0 +1,227 @@
+.commentsContainer {
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  max-height: 0;
+  position: relative;
+
+  &.show {
+    max-height: 412px;
+    display: block;
+  }
+
+  &.hide {
+    max-height: 0;
+    display: none;
+  }
+
+  &.childrenComment {
+    max-height: max-content;
+  }
+
+  .loadingScreen {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    // gap: 12px;
+    // padding: 32px 0;
+    margin-left: 12px;
+    padding: 0 24px;
+
+    .commentSkeleton {
+      display: flex;
+      align-items: start;
+      gap: 6px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+  }
+
+  .commentsWrapper {
+    max-height: 412px;
+    padding: 0 48px 48px 24px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--bg-active-primary-color);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 4px;
+    }
+
+    &.subComment {
+      margin-left: 12px;
+    }
+
+    .commentItem {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: 6px;
+      position: relative;
+
+      .commentItemWrapper {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-wrap: nowrap;
+        gap: 6px;
+        // overflow-x: hidden;
+        position: relative;
+        .authorAvatar {
+          position: relative;
+          .connectParent {
+            position: absolute;
+            border-bottom: 2px solid #ccc;
+            border-left: 2px solid #ccc;
+            width: 18px;
+            height: 250%;
+            border-bottom-left-radius: 4px;
+            bottom: 50%;
+            left: -23px;
+          }
+        }
+        .commentContentWrapper {
+          position: relative;
+          .commentContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            background-color: var(--bg-hover-color-sencondary);
+            padding: 6px 48px 6px 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            position: relative;
+
+            .line {
+              position: absolute;
+              height: calc(100% - 8px);
+              width: 2px;
+              background-color: #ccc;
+              top: 32px;
+              left: -21px;
+
+              &.showSubComments {
+                height: 150%;
+              }
+            }
+
+            .authorName {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              &:hover {
+                text-decoration: underline;
+                color: var(--primary-color);
+              }
+
+              .adminMarkup {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+
+                svg {
+                  fill: var(--admin-markup-color);
+                }
+              }
+            }
+
+            .time {
+              display: none;
+              transition: all 1s ease-in-out;
+              color: var(--text-secondary-color);
+            }
+
+            &:hover {
+              .time {
+                display: block;
+                position: absolute;
+                bottom: -14px;
+                // left: 100%;
+                // top: 50%;
+                // transform: translateY(-50%);
+                // min-width: 124px;
+                // margin-left: 4px;
+              }
+            }
+
+            .replyComment {
+              position: absolute;
+              right: 6px;
+              bottom: -16px;
+
+              &:hover {
+                text-decoration: underline;
+                color: var(--primary-color);
+              }
+            }
+
+            .commentActions {
+              position: absolute;
+              right: -32px;
+              top: 50%;
+              transform: translatey(-50%);
+              transition: all 1s ease-in-out;
+
+              button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                :global {
+                  .ant-btn-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+          .repliesDesc {
+            width: 100%;
+            margin-bottom: 16px;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .connectParent {
+              position: absolute;
+              border-bottom: 2px solid #ccc;
+              border-left: 2px solid #ccc;
+              width: 16px;
+              height: 180%;
+              border-bottom-left-radius: 4px;
+              left: -21px;
+              bottom: 50%;
+            }
+
+            .expandIcon,
+            .collapseIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 4px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .virtualReplyContainer {
+        height: 48px;
+        width: 100%;
+      }
+    }
+  }
+}

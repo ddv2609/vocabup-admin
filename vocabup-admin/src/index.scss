@@ -1,0 +1,44 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif !important;
+  --input-filled-bg-color: #f0f0f0;
+  --text-disable-color: rgba(0, 0, 0, 0.25);
+  --text-disable-color-hover: rgba(0, 0, 0, 0.88);
+  --text-primary-color: #1677ff;
+  --primary-color: #1677ff;
+  --bg-active-primary-color: #e6f4ff;
+  --chart-blur-color: rgba(230, 244, 255, 0.647);
+  /* --title-color: #00b14f; */
+  --text-secondary-color: #6c757d;
+  --error-color: #ff4d4f;
+  --bg-error-color: #ff4d5022;
+  --admin-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --container-color: #f4f5f5;
+  --color-warning: #faad14;
+  --admin-markup-color: #f7d137;
+  --border-color: #f4f5f5;
+  --bg-hover-color-sencondary: #f4f5f5;
+  --bg-overlay: rgba(0, 0, 0, 0.2);
+  --bg-content: #f5f5f5;
+  --bg-light: #ffffff;
+  --text-light: #ffffff;
+  --action-hover-color-bg: #ccc;
+  --see-detail-button: rgb(1, 193, 1);
+  --hide-button: rgb(243, 118, 128);
+  --react-icon-hover: rgb(243, 118, 128);
+  --delete-button: rgba(255, 0, 0, 0.801);
+  --unlock-button: #1677ff;
+  --email-button: #1677ff;
+  --disable-button: #ccc;
+  --post-chart-color: rgb(1, 193, 1);
+  --post-chart-blur-bg-color: rgba(1, 193, 1, 0);
+}
+
+body {
+  margin: 0;
+}
+
+.tabsContainer {
+  .ant-tabs-nav {
+    margin-bottom: 0;
+  }
+}

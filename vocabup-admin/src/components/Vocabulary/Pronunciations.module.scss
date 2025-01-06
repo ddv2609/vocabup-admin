@@ -1,0 +1,124 @@
+.pronunciationsContainer {
+  .title {
+    padding-bottom: 4px;
+    display: inline-block;
+    height: 22px;
+  }
+
+  .listItemsContainer {
+    margin-top: 12px;
+    outline: 2px var(--input-filled-bg-color) dashed;
+    border-radius: 8px;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+    height: 124px;
+    overflow-y: scroll;
+
+    .detailItemContainer {
+      background-color: var(--input-filled-bg-color);
+      padding: 6px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2px;
+
+      .btnDelete {
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        cursor: pointer;
+        background-color: var(--input-filled-bg-color);
+        transition: all 0.3s ease-in-out;
+        color: var(--text-disable-color);
+
+        &:hover {
+          background-color: #fff;
+          color: var(--text-disable-color-hover);
+        }
+
+        &:focus {
+          background-color: #fff;
+          color: var(--text-disable-color-hover);
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .iconAddWrapper {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lang,
+  .partOfSpeech {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 12px;
+    background-color: #cccccc2f;
+    outline: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .partOfSpeech {
+    &.noun {
+      background-color: #00ffff2b;
+      outline: 1px solid #00ffff;
+    }
+
+    &.verb {
+      background-color: rgba(255, 0, 0, 0.169);
+      outline: 1px solid red;
+    }
+  }
+
+  .lang {
+    &.uk {
+      background-color: rgb(79, 208, 255, 0.2);
+      outline: 1px solid rgb(79, 208, 255);
+    }
+
+    &.us {
+      background-color: rgba(255, 255, 0, 0.2);
+      outline: 1px solid rgb(255, 255, 0);
+    }
+  }
+
+  .actionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4px;
+    .btnAction {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px;
+      font-size: 16px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #ccc;
+      }
+
+      &.update {
+        color: rgb(1, 193, 1);
+      }
+
+      &.delete {
+        color: rgb(243, 118, 128);
+      }
+    }
+  }
+}

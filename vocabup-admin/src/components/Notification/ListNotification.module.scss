@@ -1,0 +1,81 @@
+$animation-duration: 0.5s;
+$animation-delay: 0.1s;
+
+.listNotificationsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px 8px 16px 16px;
+  scroll-behavior: smooth;
+
+  .itemWrapper {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+    padding: 8px 28px 8px 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideIn $animation-duration ease forwards;
+    position: relative;
+
+    @for $i from 1 through 100 {
+      &:nth-child(#{$i}) {
+        animation-delay: $animation-delay * ($i - 0.2);
+      }
+    }
+
+    &:hover {
+      background-color: var(--bg-hover-color-sencondary);
+    }
+
+    .detailInfoContainer {
+      flex: 1;
+      position: relative;
+      .senderName {
+        font-weight: bolder;
+      }
+
+      .content {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        // max-width: 300px;
+        // color: var(--text-secondary-color);
+      }
+
+      .dateTime {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4px;
+        color: var(--text-primary-color);
+      }
+    }
+
+    .actionBtn {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

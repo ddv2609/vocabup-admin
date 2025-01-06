@@ -1,0 +1,69 @@
+.filterPostsContainer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 24px;
+  background-color: var(--bg-light);
+  .filterPostsWrapper {
+    padding: 10px 0;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    gap: 8px;
+
+    .reload {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}
+
+.authorSearched {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .adminMarkup {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: var(--admin-markup-color);
+    }
+  }
+}
+
+.viewsSearch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 292px;
+
+  :global {
+    & .ant-slider {
+      width: 100%;
+    }
+  }
+}
+
+:global {
+  .ant-space-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-space {
+    column-gap: 4px;
+  }
+}

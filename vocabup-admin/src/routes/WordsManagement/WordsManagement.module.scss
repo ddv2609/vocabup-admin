@@ -1,0 +1,85 @@
+.wordsManagementContainer {
+  .tableWordsInfoContainer {
+    .posContainer {
+      display: inline-flex;
+      gap: 6px;
+      .partOfSpeech {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 6px;
+        background-color: #cccccc2f;
+        outline: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .noun {
+        background-color: #00ffff2b;
+        outline: 1px solid #00ffff;
+      }
+
+      .verb {
+        background-color: rgba(255, 0, 0, 0.169);
+        outline: 1px solid red;
+      }
+    }
+
+    .topicContainer {
+      display: inline-flex;
+      gap: 6px;
+      .topic {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 6px;
+        background-color: #cccccc2f;
+        outline: 1px solid #ccc;
+        border-radius: 6px;
+      }
+    }
+
+    .actionsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .btnAction {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #ccc;
+        }
+
+        &.seeDetail {
+          color: rgb(1, 193, 1);
+        }
+
+        &.hide {
+          color: rgb(243, 118, 128);
+        }
+
+        &.delete {
+          color: rgba(255, 0, 0, 0.801);
+        }
+      }
+    }
+
+    .tableHeaderContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+
+      .heading {
+        margin: 0;
+      }
+    }
+  }
+}

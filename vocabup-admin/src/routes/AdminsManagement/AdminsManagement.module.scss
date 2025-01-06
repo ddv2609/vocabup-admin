@@ -1,0 +1,83 @@
+.adminsManagementContainer {
+  .tableAdminsInfoContainer {
+    .actionsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .btnAction {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &.disable {
+          cursor: default;
+        }
+
+        &:hover:not(.disable) {
+          background-color: #ccc;
+        }
+
+        &.seeDetail {
+          color: rgb(1, 193, 1);
+        }
+
+        &.hide {
+          color: rgb(243, 118, 128);
+        }
+
+        &.email {
+          color: #1677ff;
+        }
+
+        &.email.disable {
+          color: #ccc;
+        }
+      }
+    }
+
+    .genderContainer {
+      display: inline-flex;
+      gap: 6px;
+      .gender {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 6px;
+        background-color: #cccccc2f;
+        outline: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .other {
+        background-color: #00ffff2b;
+        outline: 1px solid #00ffff;
+      }
+
+      .male {
+        background-color: rgba(255, 255, 0, 0.171);
+        outline: 1px solid yellow;
+      }
+
+      .female {
+        background-color: rgba(255, 192, 203, 0.18);
+        outline: 1px solid pink;
+      }
+    }
+
+    .tableHeaderContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .heading {
+        margin: 0;
+      }
+    }
+  }
+}

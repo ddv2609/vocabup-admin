@@ -1,0 +1,92 @@
+.definitionsContainer {
+  .title {
+    padding-bottom: 4px;
+    display: inline-block;
+    height: 22px;
+  }
+
+  .iconAddWrapper {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partOfSpeech {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 6px;
+    background-color: #cccccc2f;
+    outline: 1px solid #ccc;
+    border-radius: 6px;
+
+    &.noun {
+      background-color: #00ffff2b;
+      outline: 1px solid #00ffff;
+    }
+
+    &.verb {
+      background-color: rgba(255, 0, 0, 0.169);
+      outline: 1px solid red;
+    }
+  }
+
+  .actionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4px;
+    .btnAction {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px;
+      font-size: 16px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #ccc;
+      }
+
+      &.update {
+        color: rgb(1, 193, 1);
+      }
+
+      &.delete {
+        color: rgb(243, 118, 128);
+      }
+    }
+  }
+
+  .examplesViewConatiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4px;
+    .btnAction {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px;
+      font-size: 16px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #ccc;
+      }
+
+      &.viewAllExamples {
+        color: rgb(1, 193, 1);
+      }
+    }
+  }
+}

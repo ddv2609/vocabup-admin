@@ -1,0 +1,78 @@
+.account {
+  background-color: #fff;
+  // border-radius: 12px;
+  padding: 16px;
+
+  .adminAvatar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .info {
+    .adminName,
+    .role {
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    .adminName {
+      margin: 8px 0;
+    }
+
+    .role {
+      margin: 4px 0 12px;
+    }
+
+    .address,
+    .tel,
+    .email,
+    .dob {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .address {
+      margin: 6px 0 8px;
+      font-size: 12px;
+    }
+
+    .tel,
+    .email,
+    .dob {
+      margin-bottom: 4px;
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+  }
+
+  .updateInfo {
+    margin: 12px 42px;
+    padding: 0 64px;
+  }
+
+  .changeInfo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .submitWrapper {
+    text-align: center;
+  }
+
+  .icon {
+    color: var(--title-color);
+  }
+
+  .adminInfoConatiner {
+    .adminFormContainer {
+      margin: 0 72px;
+    }
+  }
+}

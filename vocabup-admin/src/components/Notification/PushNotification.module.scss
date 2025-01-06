@@ -1,0 +1,106 @@
+.pushNotificationContainer {
+  height: 100%;
+
+  .headingContainer {
+    padding: 16px;
+    border-bottom: 2px solid var(--border-color);
+    // border-top: 2px solid var(--border-color);
+    .headingContent {
+      margin: 0;
+      color: var(--text-secondary-color);
+    }
+  }
+
+  .formPushContainer {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    height: 90%;
+    overflow-y: auto;
+    .textInputWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 70%;
+      .titleWrapper {
+        display: flex;
+        gap: 12px;
+        position: relative;
+
+        .emojiContainer {
+          position: absolute;
+          z-index: 100;
+          right: 0;
+          top: 40px;
+          .emojiPicker {
+            // max-width: 350px;
+            max-height: 364px;
+          }
+        }
+
+        &:nth-child(1) {
+          .emoji {
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        &:nth-child(2) {
+          .emoji {
+            top: 2px;
+            right: 6px;
+          }
+        }
+
+        &:nth-child(3) {
+          .content {
+            color: var(--text-secondary-color);
+          }
+        }
+
+        .label {
+          min-width: 64px;
+        }
+
+        .content {
+          flex: 1;
+
+          :global {
+            .ant-input {
+              font-size: 14px;
+              font-family: "Helvetica", sans-serif !important;
+              padding-right: 28px;
+            }
+          }
+        }
+
+        .emoji {
+          position: absolute;
+          width: 28px;
+          height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          border-radius: 50%;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--bg-active-primary-color);
+            color: var(--text-primary-color);
+          }
+        }
+      }
+    }
+
+    .uploadImageWrapper {
+      width: 30%;
+      text-align: center;
+
+      .imageWrapper {
+        margin-top: 12px;
+      }
+    }
+  }
+}

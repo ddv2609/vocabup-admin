@@ -1,0 +1,60 @@
+.topicsManagementContainer {
+  .tableHeaderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .heading {
+      margin: 0;
+    }
+  }
+
+  .actionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .btnAction {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &.disable {
+        cursor: default;
+      }
+
+      &:hover:not(.disable) {
+        background-color: #ccc;
+      }
+
+      &.seeDetail {
+        color: rgb(1, 193, 1);
+      }
+
+      &.hide {
+        color: rgb(243, 118, 128);
+      }
+
+      &.delete {
+        color: rgba(255, 0, 0, 0.801);
+      }
+
+      &.unlock {
+        color: #1677ff;
+      }
+
+      &.email {
+        color: #1677ff;
+      }
+
+      &.email.disable {
+        color: #ccc;
+      }
+    }
+  }
+}

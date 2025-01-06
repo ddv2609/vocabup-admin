@@ -1,0 +1,82 @@
+.uploadImageContainer {
+  .imageUploader {
+    .uploadWrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .imageUpload {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        .image {
+          width: 100%;
+          height: 100%;
+          // border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .iconEye {
+          display: none;
+          color: #ccc;
+          font-size: 18px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+          .iconEye {
+            display: inline-block;
+          }
+
+          &::before {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            border-radius: 50%;
+            background-color: rgb(0, 0, 0, 0.3);
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            color: #fff;
+          }
+        }
+      }
+
+      .editBtn {
+        max-height: 24px;
+        // max-width: 52px;
+        border: none;
+        background-color: #fff;
+        padding: 0 4px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 10px;
+        left: -12px;
+        border-radius: 6px;
+        font-weight: 500;
+        color: #515151;
+        font-size: 12px;
+        opacity: 0.75;
+        border: 1px solid #515151;
+
+        &:hover {
+          color: var(--text-primary-color) !important;
+          border: 1px solid var(--text-primary-color) !important;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

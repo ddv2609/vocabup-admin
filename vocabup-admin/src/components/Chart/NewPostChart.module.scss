@@ -1,0 +1,40 @@
+.newPostChartContainer {
+  // padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .chartHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+
+    .timeRanges {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 6px;
+
+      .timeItem {
+        padding: 4px 8px;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 14px !important;
+        line-height: 18px !important;
+        font-family: "Helvetica", sans-serif !important;
+        transition: all 0.3s ease-in-out;
+
+        &.active {
+          font-weight: 600;
+          color: var(--text-primary-color);
+          background-color: var(--bg-active-primary-color);
+        }
+
+        &:hover {
+          background-color: var(--bg-active-primary-color);
+        }
+      }
+    }
+  }
+}

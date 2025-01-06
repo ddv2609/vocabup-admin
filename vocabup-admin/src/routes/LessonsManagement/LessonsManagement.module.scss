@@ -1,0 +1,63 @@
+.lessonsManagementContainer {
+  .tableHeaderContainer {
+    display: flex;
+    align-items: center;
+
+    .backIcon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      width: 48px;
+      cursor: pointer;
+      border-radius: 24px;
+      padding: 4px 0;
+      transition: all 0.2s ease-in-out;
+      border: 1px solid var(--border-color);
+
+      &:hover {
+        background-color: var(--bg-active-primary-color);
+        color: var(--text-primary-color);
+      }
+    }
+
+    .actionBtns {
+      flex: 1;
+      display: flex;
+      justify-content: right;
+    }
+  }
+
+  .actionsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .btnAction {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px;
+      border-radius: 50%;
+      background-color: var(--text-light);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &.disable {
+        cursor: default;
+      }
+
+      &:hover:not(.disable) {
+        background-color: var(--action-hover-color-bg);
+      }
+
+      &.update {
+        color: var(--see-detail-button);
+      }
+
+      &.delete {
+        color: var(--delete-button);
+      }
+    }
+  }
+}

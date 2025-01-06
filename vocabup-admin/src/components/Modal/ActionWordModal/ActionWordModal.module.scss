@@ -1,0 +1,93 @@
+.wordInfoDetailContainer {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 0 8px;
+  border-bottom: 1px var(--input-filled-bg-color) solid;
+  .wordImageContainer {
+    margin-right: 16px;
+    width: 146px;
+    height: 146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .impotantDetaiInfoContainer {
+    flex: 1;
+  }
+}
+
+.extraDetaiInfoContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 254px;
+  padding: 0 8px 8px 8px;
+  border-bottom: 1px var(--input-filled-bg-color) solid;
+  .synonymsContainer,
+  .antonymsContainer,
+  .verbsContainer {
+    .title {
+      padding-bottom: 4px;
+      display: inline-block;
+      height: 22px;
+    }
+    .inputContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+
+      .iconAddWrapper {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .listItemsContainer {
+      margin-top: 12px;
+      outline: 2px var(--input-filled-bg-color) dashed;
+      border-radius: 8px;
+      padding: 8px;
+      transition: all 0.3s ease-in-out;
+      height: 124px;
+      overflow-y: scroll;
+
+      .detailItemContainer {
+        background-color: var(--input-filled-bg-color);
+        padding: 6px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2px;
+
+        .btnDelete {
+          border-radius: 50%;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 4px;
+          cursor: pointer;
+          background-color: var(--input-filled-bg-color);
+          transition: all 0.3s ease-in-out;
+          color: var(--text-disable-color);
+
+          &:hover {
+            background-color: #fff;
+            color: var(--text-disable-color-hover);
+          }
+
+          &:focus {
+            background-color: #fff;
+            color: var(--text-disable-color-hover);
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

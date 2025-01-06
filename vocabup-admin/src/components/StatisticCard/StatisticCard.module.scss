@@ -1,0 +1,80 @@
+.card {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: var(--admin-box-shadow);
+  width: 272px;
+
+  .header {
+    .title {
+      margin-top: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .icon {
+      font-size: 32px;
+      color: var(--text-primary-color);
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .content {
+    .amount {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .growth {
+      font-size: 10px;
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+
+      .compare {
+        color: var(--text-secondary-color);
+        margin-left: 8px;
+      }
+
+      .icon {
+        font-size: 14px;
+        margin-right: 4px;
+      }
+
+      .percent {
+        font-weight: bold;
+      }
+
+      .growthWrapper {
+        padding: 2px 4px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+      }
+
+      &.growthUp {
+        .growthWrapper {
+          background-color: var(--bg-active-primary-color);
+        }
+
+        .icon,
+        .percent {
+          color: var(--text-primary-color);
+        }
+      }
+
+      &.growthDown {
+        .growthWrapper {
+          background-color: var(--bg-error-color);
+        }
+
+        .icon,
+        .percent {
+          color: var(--error-color);
+        }
+      }
+    }
+  }
+}
