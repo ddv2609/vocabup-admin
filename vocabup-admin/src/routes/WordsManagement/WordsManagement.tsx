@@ -151,12 +151,20 @@ const WordsManagement: React.FC = () => {
     getWordsInfo(1, pageInfo.size);
 
     const handleListenVocabUpdate = (updatedWord: Word) => {
-      setWords((prev) =>
-        prev.map((word) => {
-          if (word._id !== updatedWord._id) return word;
-          else return updatedWord;
-        })
+      const wordFound = words.find(
+        (word: Word) => word._id === updatedWord._id
       );
+
+      if (wordFound?._id) {
+        setWords((prev) =>
+          prev.map((word) => {
+            if (word._id !== updatedWord._id) return word;
+            else return updatedWord;
+          })
+        );
+      } else {
+        setWords((prev) => [...prev, updatedWord]);
+      }
     };
 
     emitter.on(EventEmit.UpdateVocab, handleListenVocabUpdate);
